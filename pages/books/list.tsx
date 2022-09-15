@@ -15,6 +15,7 @@ interface Book {
 const Book: FunctionComponent = () => {
 
     const [userName, setUserName] = useState("");
+    const [userAge, setUserAge] = useState(0);
     const flags = useFlags<FlagOptions, TraitOptions>(["sale_book"]) // only causes re-render if specified flag values / traits change
     const flagsmith = useFlagsmith();
 
@@ -30,7 +31,7 @@ const Book: FunctionComponent = () => {
 
     const login = () => {
 
-        flagsmith.identify(userName);
+        flagsmith.identify(userName, { age: userAge });
     };
 
     const getDiscountAmount = (feature: IFlagsmithFeature): number => {
@@ -46,6 +47,7 @@ const Book: FunctionComponent = () => {
                 <label>
                     Name:
                     <input type="text" value={userName} onChange={(e) => handleChange(e.target.value)} />
+                    <input type="text" value={userAge} onChange={(e) => setUserAge(+e.target.value)} />
                 </label>
                 <input type="button" value="login" onClick={login} />
             </form>
