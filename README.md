@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sample Next.js with Feature Flag Management
+
+## General
+- [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+- Feature flag management using [Flagsmith](https://flagsmith.com/)
 
 ## Getting Started
 
@@ -12,23 +16,41 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Second, navigate to the book list page [http://localhost:3000/books/list](http://localhost:3000/books/list) to explore the simple feature flag implementation.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## What is Feature Flag ?
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- A way to toggle selected functionalities on and off during runtime
+- A feature flag management tool is a system helps manage these flags with much more functionalities such as A/T testing, analytics, system settings, ect.
 
-## Learn More
+## Why use Feature Flag ?
 
-To learn more about Next.js, take a look at the following resources:
+- De-risk/de-couple release and deployment
+- Avoid long-live feature branch
+- Other benefits depends on the vendors:
+    - A/T testing
+    - Targeted rollout
+    - Feature experiment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## When to use Feature Flag ?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- A need for a fast functionality toggle system
+- A need to ship the release "control" to the business
+- Time to do some experiments
 
-## Deploy on Vercel
+## What is the drawbacks ?
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Overhead: unorganized flags or removing archived flags will create chaos
+- Cost: when something is both good and fast, it will be expensive
+- Reliable: what happens when their APIs are not available
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## How to make the most of out Feature Flag ?
+
+- Experiment the experiments: got for a test drive before buying
+- Set rules: on managing the flags and clean up old flags frequently
+- Code defensively: don't trust anyone code, even your own
+
+
+## Resources:
+- https://graphql.org/code/#java-kotlin
+- https://docs.spring.io/spring-graphql/docs/current/reference/html/#overview
