@@ -28,7 +28,7 @@ Second, navigate to the book list page [http://localhost:3000/books/list](http:/
 - De-risk/de-couple release and deployment
 - Avoid long-live feature branch
 - Other benefits depends on the vendors:
-    - A/T testing
+    - A/B testing
     - Targeted rollout
     - Feature experiment
 
@@ -50,7 +50,3 @@ Second, navigate to the book list page [http://localhost:3000/books/list](http:/
 - Set rules: on managing the flags and clean up old flags frequently
 - Code defensively: don't trust anyone code, even your own
 
-
-## Resources:
-- https://graphql.org/code/#java-kotlin
-- https://docs.spring.io/spring-graphql/docs/current/reference/html/#overview
